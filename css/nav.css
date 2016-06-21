@@ -1,0 +1,27 @@
+/*use nasting in sass so nav img is just img */
+nav {
+  display: inline;
+  z-index: 999;
+  position: relative; }
+  nav img:first-child {
+    background-color: #00FFA9;
+    transform: translate(23em, 7em) rotate(-15deg);
+    height: 4em;
+    width: 4em;
+    display: block;
+    border-radius: 0 1em 0 1em;
+    z-index: 999; }
+  nav a {
+    color: #44eb60;
+    font: 1.7em "Slabo 27px", serif;
+    transition: alll 0.3s ease; }
+  nav a:hover {
+    background-color: #E5FF00; }
+  nav table {
+    transform: translate(32em, 0);
+    position: relative;
+    z-index: 999; }
+    nav table caption {
+      color: #C0FFDE !important; }
+
+/*# sourceMappingURL=nav.css.map */

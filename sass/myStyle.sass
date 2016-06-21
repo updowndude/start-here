@@ -1,0 +1,80 @@
+@charset "UTF-8"
+
+@import "reset"
+@import "aside"
+@import "nav"
+@import "footer"
+
+$navBackgroundColor: #E86E03
+$myGreen: #44EB60
+
+h1
+  font-family: 'PT Serif', serif
+
+h2
+  font-family: 'Slabo 27px', serif
+
+p
+  font-family: "dyslexie"
+
+body
+  background-color: #1bb
+
+.mdl-layout__header
+  background-color: $navBackgroundColor
+
+.mdl-layout-title, .material-icons
+  color: $myGreen
+
+.mdl-layout__drawer
+  background-color: #1bb
+
+.mdl-layout__drawer .mdl-layout-title
+  font: 2.5em 'PT Serif', serif
+
+nav a:hover
+  background-color: #854104
+
+.pageContent
+  //https://pixabay.com/static/uploads/photo/2015/08/18/16/53/stripes-894504_960_720.jpg
+  background: url(../images/bgContent.png)
+  background-size: cover
+  text-align: center
+  transform: translateY(5em)
+  border-radius: 3em
+
+#home
+  position: absolute
+  z-index: 99999
+  border-radius: 5em
+  bottom: 2em
+  right: 2em
+  background-color: $navBackgroundColor
+
+.mdl-layout
+  margin-top: -2em
+
+#pageHome
+  transform: translateY(4em)
+
+video
+  height: 50em
+  width: 50em
+  margin: -13em 0 -9em 0
+  border: 10px inset $myGreen
+  transform: translateY(5em)
+  padding-top: -10em
+
+#reactHomme
+  color: $navBackgroundColor
+
+  #homePic
+    height: 20em
+    width: 20em
+    margin-bottom: 2.5em
+  p
+    font-size: 2em
+    margin-top: -0.5em
+
+  img
+    border: 10px inset $myGreen
