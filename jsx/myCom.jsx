@@ -1,6 +1,3 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-
 class Home extends React.Component {
   render() {
     var {img} = this.props;
@@ -13,5 +10,9 @@ class Home extends React.Component {
     );
   }
 }
+try {
+  ReactDOM.render(<Home img="images/placeHolder.png" />,
+  document.getElementById('reactHome'));
+} catch (error) {
 
-ReactDOM.render(<Home img="images/placeHolder.png" />, document.getElementById('reactHomme'));
+}

@@ -6,6 +6,5 @@
 </footer>
 
 </div>
-<script src="../dist/done/bundle.js" type="text/javascript"></script>
 </body>
 </html>

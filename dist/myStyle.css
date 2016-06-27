@@ -134,16 +134,14 @@ video {
   transform: translateY(5em);
   padding-top: -10em; }
 
-#reactHomme {
+#reactHome {
   color: #E86E03; }
-  #reactHomme #homePic {
+  #reactHome #homePic {
     height: 20em;
     width: 20em;
     margin-bottom: 2.5em; }
-  #reactHomme p {
+  #reactHome p {
     font-size: 2em;
     margin-top: -0.5em; }
-  #reactHomme img {
-    border: 10px inset #44EB60; }
-
-/*# sourceMappingURL=myStyle.css.map */
+  #reactHome img {
+    border: 10px inset #16cd35; }

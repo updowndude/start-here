@@ -12,8 +12,6 @@ this.setActionHidden_(!1)),this.textElement_.textContent=this.message_,this.elem
 
 },{}],2:[function(require,module,exports){
 require("./../bower_components/material-design-lite/material.min.js");
-if (document.readyState === 'complete') {
-  alert("Test");
-}
+alert("sg");
 
 },{"./../bower_components/material-design-lite/material.min.js":1}]},{},[2]);
