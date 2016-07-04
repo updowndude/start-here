@@ -1,0 +1,222 @@
+/* CSS Document */
+/* form rest.css */
+/*variable used in sass only in sass */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* bring in tont to used */
+@font-face {
+  src: url(../../fonts/Dyslexie.ttf);
+  font-family: "dyslexie"; }
+a {
+  outline: 0;
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+/*end of resest */
+/* changes  uber atricle and things inside for the flaot objects on the left */
+.asider {
+  position: fixed;
+  left: -75px;
+  top: 350px;
+  background: linear-gradient(#CC5656 5%, #1bb 80%, #CC5656 15%);
+  padding: 1.5em;
+  border-radius: 50px 0 50px;
+  opacity: 0.3;
+  transition: all 0.3s ease; }
+  .asider img {
+    width: 3em !important;
+    height: 3em !important;
+    z-index: 99999; }
+
+/* makes the hover object avaialbe */
+.asider:hover {
+  transform: translateX(50px);
+  opacity: 1; }
+
+footer {
+  margin-top: 0.75em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font: 1.2em "PT Serif", serif;
+  background: rgba(204, 86, 86, 0.3);
+  letter-spacing: 1.2em;
+  color: #D1F8A1; }
+  footer p {
+    text-align: center;
+    font-size: 1.25em;
+    margin-bottom: -0.1em;
+    letter-spacing: 0.5em; }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; }
+
+h1 {
+  font-family: "PT Serif", serif; }
+
+h2 {
+  font-family: "Slabo 27px", serif; }
+
+p {
+  font-family: "dyslexie"; }
+
+body {
+  background-color: #1bb; }
+
+.mdl-layout__header {
+  background-color: #CC5656;
+  position: fixed; }
+  .mdl-layout__header .mdl-layout__header-row {
+    background-color: #CC5656; }
+    .mdl-layout__header .mdl-layout__header-row p {
+      color: #D1F8A1;
+      cursor: pointer;
+      transform: translateY(0.4em);
+      font-size: 1.2em; }
+    .mdl-layout__header .mdl-layout__header-row img {
+      width: 4.5em;
+      height: 4.5em;
+      transform: translateX(-1em); }
+
+.mdl-layout__obfuscator.is-visible {
+  position: fixed; }
+
+.mdl-layout__drawer.is-visible {
+  background-color: #CC5656;
+  position: fixed; }
+  .mdl-layout__drawer.is-visible p {
+    color: #D1F8A1;
+    cursor: pointer;
+    padding: 0.5em; }
+
+.mdl-layout-title {
+  color: #D1F8A1;
+  margin-bottom: -0.8em;
+  transform: translateY(-0.3em);
+  font-size: 2.7em; }
+
+.material-icons {
+  color: #D1F8A1;
+  position: fixed;
+  transform: translateY(0.5em); }
+
+.mdl-layout__drawer .mdl-layout-title {
+  font: 2.5em "PT Serif", serif; }
+
+nav p:hover {
+  background-color: rgba(248, 236, 105, 0.5); }
+
+.pageContent {
+  background: url(../../images/bgContent.png);
+  background-size: cover;
+  text-align: center;
+  transform: translateY(5em);
+  border-radius: 3em;
+  box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.1), 1px -5px 1px rgba(0, 0, 0, 0.1); }
+  .pageContent h1, .pageContent h2, .pageContent h3, .pageContent p {
+    color: #D1F8A1; }
+
+#home {
+  position: fixed;
+  z-index: 99999;
+  border-radius: 5em;
+  bottom: 2em;
+  right: 2em;
+  background-color: #CC5656; }
+
+.mdl-layout {
+  margin-top: -2em; }
+
+#pageHome {
+  transform: translateY(4em); }
+
+video {
+  height: 50em;
+  width: 50em;
+  margin: -13em 0 -9em 0;
+  border: 10px inset #D1F8A1;
+  transform: translateY(5em);
+  padding-top: -10em; }
+
+#reactHome {
+  color: #CC5656;
+  position: relative;
+  z-index: 100; }
+  #reactHome #homePic {
+    height: 23em;
+    width: 23em;
+    margin-bottom: 2.5em; }
+  #reactHome h1 {
+    background: linear-gradient(transparent 95%, #1bb 5%);
+    border-radius: 5em;
+    width: 17em;
+    transform: translateX(3.5em); }
+  #reactHome p {
+    font-size: 2em;
+    margin-top: -0.5em; }
+  #reactHome img {
+    position: relative;
+    transform: translate(37.5em, -7.3em); }
+  #reactHome canvas {
+    position: relative;
+    margin: -15em 0 -15em 0;
+    z-index: 999;
+    height: 30em;
+    border-radius: 5em;
+    transform: translateY(-13em); }
+
+#reactAbout {
+  margin-bottom: -4em; }
+  #reactAbout img {
+    height: 30em;
+    width: 30em;
+    border: 10px inset #CC5656; }
+  #reactAbout h2 {
+    padding-top: 0.5em; }
+  #reactAbout h3 {
+    background-color: #1bb;
+    border-radius: 5em 5em 0 0;
+    color: #CC5656;
+    padding-bottom: 0.5em;
+    transform: translateY(1em); }
+  #reactAbout p {
+    color: #CC5656;
+    font-size: 2em;
+    background-color: #1bb;
+    transform: translateY(-1.2em);
+    padding: 0.5em;
+    border-radius: 0 0 1em 1em;
+    margin-bottom: -1em;
+    transform: translateY(0.2em);
+    line-height: 1.5em;
+    box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.1); }
+
+#pageThnak {
+  position: relative;
+  margin-top: -2em; }
+
+#pageTools {
+  margin-bottom: 2em; }
+  #pageTools h2 {
+    margin: 2em 0 -0.25em 0;
+    padding-top: 0.5em; }
+  #pageTools .mdl-list__item-avatar {
+    transform: translate(-1.25em, -0.15em);
+    color: #D1F8A1; }
+  #pageTools .ToolsName {
+    font: 1.5em "dyslexie";
+    color: #D1F8A1;
+    cursor: pointer; }
+  #pageTools .ToolsName:hover {
+    background-color: rgba(248, 236, 105, 0.5); }
+  #pageTools .mdl-list__item-sub-title {
+    padding: 1em;
+    font: 1em "dyslexie"; }
+
+#pageProgramming {
+  margin-bottom: 5em; }

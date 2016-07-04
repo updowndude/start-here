@@ -11,7 +11,9 @@
     "summer"
   ],
   "moduleType": [
-    "es6"
+    "es6",
+    "globals",
+    "node"
   ],
   "homepage": "",
   "dependencies": {

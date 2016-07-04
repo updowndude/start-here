@@ -2,11 +2,19 @@
 
 @import "reset"
 @import "aside"
-@import "nav"
 @import "footer"
 
-$navBackgroundColor: #E86E03
-$myGreen: #44EB60
+$navBackgroundColor: #CC5656
+$myGreen: #D1F8A1
+$bgColor: #1bb
+
+=nav-p-tags()
+  color: $myGreen
+  cursor: pointer
+
+html, body
+  max-width: 100%
+  overflow-x: hidden
 
 h1
   font-family: 'PT Serif', serif
@@ -18,33 +26,69 @@ p
   font-family: "dyslexie"
 
 body
-  background-color: #1bb
+  background-color: $bgColor
 
 .mdl-layout__header
   background-color: $navBackgroundColor
+  position: fixed
 
-.mdl-layout-title, .material-icons
+  .mdl-layout__header-row
+    background-color: $navBackgroundColor
+
+    p
+      +nav-p-tags()
+      transform: translateY(0.4em)
+      font-size: 1.2em
+
+    img
+      width: 4.5em
+      height: 4.5em
+      transform: translateX(-1em)
+
+.mdl-layout__obfuscator.is-visible
+  position: fixed
+
+.mdl-layout__drawer.is-visible
+  background-color: $navBackgroundColor
+  position: fixed
+
+  p
+    +nav-p-tags()
+    padding: 0.5em
+
+.mdl-layout-title
   color: $myGreen
+  margin-bottom: -0.8em
+  transform: translateY(-0.3em)
+  font-size: 2.7em
 
-.mdl-layout__drawer
-  background-color: #1bb
+.material-icons
+  color: $myGreen
+  position: fixed
+  transform: translateY(0.5em)
 
 .mdl-layout__drawer .mdl-layout-title
   font: 2.5em 'PT Serif', serif
 
-nav a:hover
-  background-color: #854104
+nav p:hover
+  background-color: rgba(248,236,105,0.5)
 
 .pageContent
   //https://pixabay.com/static/uploads/photo/2015/08/18/16/53/stripes-894504_960_720.jpg
-  background: url(../images/bgContent.png)
+  background: url(../../images/bgContent.png)
   background-size: cover
   text-align: center
   transform: translateY(5em)
   border-radius: 3em
+  box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.1), 1px -5px 1px rgba(0, 0, 0, 0.1)
+  @if height == 0
+    height: 500px
+
+  h1,h2,h3,p
+    color: $myGreen
 
 #home
-  position: absolute
+  position: fixed
   z-index: 99999
   border-radius: 5em
   bottom: 2em
@@ -67,14 +111,91 @@ video
 
 #reactHome
   color: $navBackgroundColor
+  position: relative
+  z-index: 100
 
   #homePic
-    height: 20em
-    width: 20em
+    height: 23em
+    width: 23em
     margin-bottom: 2.5em
+
+  h1
+    background: linear-gradient(rgba(0, 0, 0, 0) 95%, $bgColor 5%)
+    border-radius: 5em
+    width: 17em
+    transform: translateX(3.5em)
+
   p
     font-size: 2em
     margin-top: -0.5em
 
   img
-    border: 10px inset darken($myGreen,15)
+    position: relative
+    transform: translate(37.5em,-7.3em)
+
+  canvas
+    position: relative
+    margin: -15em 0 -15em 0
+    z-index: 999
+    height: 30em
+    border-radius: 5em
+    transform: translateY(-13em)
+
+#reactAbout
+  margin-bottom: -4em
+
+  img
+    height: 30em
+    width: 30em
+    border: 10px inset $navBackgroundColor
+
+  h2
+    padding-top: 0.5em
+
+  h3
+    background-color: $bgColor
+    border-radius: 5em 5em 0 0
+    color: $navBackgroundColor
+    padding-bottom: 0.5em
+    transform: translateY(1em)
+
+  p
+    color: $navBackgroundColor
+    font-size: 2em
+    background-color: $bgColor
+    transform: translateY(-1.2em)
+    padding: 0.5em
+    border-radius: 0 0 1em 1em
+    margin-bottom: -1em
+    transform: translateY(0.2em)
+    line-height: 1.5em
+    box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.1)
+
+#pageThnak
+  position: relative
+  margin-top: -2em
+
+#pageTools
+  margin-bottom: 2em
+
+  h2
+    margin: 2em 0 -0.25em 0
+    padding-top: 0.5em
+
+  .mdl-list__item-avatar
+    transform: translate(-1.25em,-0.15em)
+    color: $myGreen
+
+  .ToolsName
+    font: 1.5em "dyslexie"
+    +nav-p-tags()
+
+  .ToolsName:hover
+    background-color: rgba(248,236,105,0.5)
+
+  .mdl-list__item-sub-title
+    padding: 1em
+    font: 1em "dyslexie"
+
+#pageProgramming
+  margin-bottom: 5em

@@ -4,14 +4,15 @@ This place where a person is starting from web development, game development
 essay writing.
 
 initialize setup
-node
-  bower global
-php sever
+node sever
 
 commands
-  gulp jsMIn
-    final step
   gulp
+    development
+  xo
+    test
+  node index.js
+    node backend
 
 dependencies
   node
@@ -20,14 +21,9 @@ dependencies
   live reload
   bower global
   gulp global
+  xo global
 
 Todos
-  home
-    no lorem ipsum
-
-  about
-    why start here
-
   forms
     check fails message
       bold and red
@@ -68,7 +64,6 @@ Todos
   error page
   form text me
   mobile friendly
-  performance
   modular code
   comments
   scales
@@ -76,27 +71,27 @@ Todos
   cookie use notice
   fixable search
   scollbar stylized
-  logo
   html 5
-  css 3
   database
-  fork me
-  color theory
   administrator page
   flexbox
-  Switch title = react Dom
   window object react
   Electron desktop
   Mobile react native
-  Head links go to of section
   Mobile & desktop take tools
   Unit test
   Css animation
+  mdl Dialog windows game
+  hover effects
+  Aside qr code for other versions
+  epress fill out
+  php version
 
 Tools
   revers speaker
     input string
     sentences in revers
+    stop before next sentences
   game
     nightfall
   programming map
@@ -108,6 +103,7 @@ Tools
       js
       sql
       php
+      node
 
 components used
     git
@@ -118,11 +114,10 @@ components used
   mysql
   sass
     react
-  angular
     bootstrap
-  php
     three
     material design lite
     jasmine
-    babelify
-    browserify
+    express
+    bable
+    redux

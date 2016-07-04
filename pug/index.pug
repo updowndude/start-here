@@ -1,0 +1,62 @@
+doctype html
+html(lang="en")
+  head
+    title Home
+    meta(charset="UTF-8")
+    meta(name="author", content="Correy Winke")
+    meta(name="language", content="english")
+    meta(name="description", content="Help person find where to start with a topic")
+    meta(name="abstract", content="Main page")
+    link(href='http://fonts.googleapis.com/css?family=PT+Serif', rel='stylesheet', type='text/css')
+    link(rel="icon", type="image/x-icon", href="images/favicon.ico")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="shortcut icon", type="image/x-icon", href="images/favicon.ico")
+    link(href='https://fonts.googleapis.com/css?family=Slabo+27px', rel='stylesheet', type='text/css')
+    link(rel="stylesheet", type="text/css", href="dist/done/final.css")
+    script(src="dist/done/rLib.js", type="text/javascript")
+
+  body
+    #container
+      div.mdl-layout.mdl-js-layout
+        header.mdl-layout__header
+          div.mdl-layout__header-row
+            span.mdl-layout-title Pages
+            div.mdl-layout-spacer
+            nav.mdl-navigation
+              img(src="images/shape.png", alt="Shape")
+              p.navP Home &nbsp;
+              p.navP About &nbsp;
+              p.navP Tools &nbsp;
+              p.navP Form &nbsp;
+        div.mdl-layout__drawer
+          span.mdl-layout-title Tools
+          nav.mdl-navigation
+            p.navP Programming
+            p.navP Reverse
+            p.navP Game
+
+      button#home.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--colored
+        i.material-icons home
+
+      div.pageContent#pageHome
+        div#reactHome
+
+      div.pageContent#pageAbout
+        div#reactAbout
+
+      div.pageContent#pageTools
+        div#reactTools
+
+      div.pageContent#pageProgramming
+        div#reactProgramming
+
+      aside#socialMedia.asider
+        a(target="_blank", rel="noopener noreferrer", href="https://www.facebook.com/profile.php?id=100009007188851")
+          img(src="images/fb.png", alt="Facebook")
+        a(target="_blank", rel="noopener noreferrer", href="https://www.linkedin.com/in/correy-winke-9b2734118?trk=nav_responsive_tab_profile_pic")
+          img(src="images/lin.png", alt="Linkden")
+
+      footer
+        p Correy Winke, &copy;	 2016.
+
+    script(src="dist/done/my-stuff.js", type="text/javascript")
