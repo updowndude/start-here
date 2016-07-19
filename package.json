@@ -18,17 +18,19 @@
   },
   "babel": {
     "presets": [
-      "es2015"
+      "react",
+      "es2015",
+      "es2016"
     ]
   },
   "xo": {
     "esnext": true,
     "globals": [
       "window",
-      "THREE",
       "document",
-      "React",
-      "ReactDOM"
+      "SpeechSynthesisUtterance",
+      "dialogPolyfill",
+      "XMLHttpRequest"
     ],
     "ignores": [
       "public/**"
@@ -36,31 +38,43 @@
     "extends": "xo-react",
     "overrides": [
       {
-        "files": "js/stuff.js",
+        "files": "jsx/*.jsx",
         "rules": {
-          "no-unused-vars": 0
+          "no-undef": 0,
+          "react/jsx-handler-names": 0,
+          "react/no-unknown-property": 0
         }
       },
       {
-        "files": "jsx/*.jsx",
+        "files": "gulpfile.babel.js",
         "rules": {
-          "react/prop-types": 0
+          "camelcase": 0
         }
       }
     ]
   },
   "dependencies": {
-    "babel": "^6.5.2",
+    "axios": "^0.13.1",
     "bower": "^1.7.9",
     "express": "^4.14.0",
     "jasmine": "^2.4.1",
     "mysql": "^2.11.1",
+    "nodemon": "^1.9.2",
     "pug": "^2.0.0-beta3",
     "pump": "^1.0.1",
-    "serve-favicon": "^2.3.0"
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "serve-favicon": "^2.3.0",
+    "three": "^0.78.0"
   },
   "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.10.2",
     "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2016": "^6.11.0",
+    "babel-preset-react": "^6.11.1",
     "babel-register": "^6.9.0",
     "eslint-config-xo": "^0.15.2",
     "eslint-config-xo-react": "^0.8.0",
@@ -71,15 +85,21 @@
     "gulp-concat": "^2.6.0",
     "gulp-concat-css": "^2.3.0",
     "gulp-livereload": "^3.8.1",
+    "gulp-mamp": "0.0.4",
     "gulp-minify": "0.0.12",
     "gulp-pug": "^3.0.3",
-    "gulp-react": "^3.1.0",
     "gulp-ruby-sass": "^2.0.6",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.4",
+    "gulp-webpack": "^1.5.0",
+    "webpack": "^1.13.1",
     "xo": "^0.16.0"
   },
   "scripts": {
-    "test": "xo"
+    "test": "./node_modules/.bin/xo",
+    "myBower": "./node_modules/.bin/bower",
+    "dev": "./node_modules/.bin/gulp & node index.js",
+    "devMom": "./node_modules/.bin/gulp & ./node_modules/.bin/nodemon index.js",
+    "stop": "./node_modules/.bin/gulp stop & kill $(lsof -t -i:35729)"
   }
 }

@@ -1,33 +1,32 @@
 Goal
-The goal of the project is to help a person help a place to start.
-This place where a person is starting from web development, game development
-essay writing.
+The goal of the project is to help a person help a place to start. This is a place where a person can find place to starting for web development, game development, and essay writing.
 
 initialize setup
 node sever
 
 commands
-  gulp
-    development
-  xo
+  npm run
     test
-  node index.js
-    node backend
+      check js & jsx files
+    myBower
+      bower local to project
+    dev
+      start dev environment
+    devMom
+      if changes are index.js
+    stop
+      run after dev or devMom
 
 dependencies
   node
   sass
     ruby
   live reload
-  bower global
-  gulp global
-  xo global
 
 Todos
   forms
-    check fails message
-      bold and red
-    check against injection attacks
+    checks fails message
+      tell user
     inputs
       importance number
       first name
@@ -41,69 +40,34 @@ Todos
       phone number
       quality
         radio buttons
-
-    js only
-    id and names
     flow control
     show progress
-  image galley
   lightbox
-  table
-    page
-    elements
-      start
-      search
-      clear button
-      columns donation
-        price
-        fist
-        time
-        user
-  focusable data
-  stylized menus
-  error page
-  form text me
+  focusable inputs
   mobile friendly
-  modular code
   comments
-  scales
   other browsers
-  cookie use notice
-  fixable search
   scollbar stylized
-  html 5
-  database
-  administrator page
   flexbox
-  window object react
-  Electron desktop
-  Mobile react native
-  Mobile & desktop take tools
+  Mobile
+    react native
+    tools
   Unit test
   Css animation
-  mdl Dialog windows game
   hover effects
-  Aside qr code for other versions
-  epress fill out
+  Aside qr code for mobile versions
+  epress
+    error page
+    logger
+    handle error if mysql isn't running
   php version
+  programming map hover element circle changes to element
+  check against injection attacks
+  tooltip
 
 Tools
-  revers speaker
-    input string
-    sentences in revers
-    stop before next sentences
   game
-    nightfall
-  programming map
-    development
-    nodes over circle changes info about node
-    nodes
-      html
-      css
-      js
-      sql
-      php
-      node
+    to something else
 
 components used
     git
@@ -120,4 +84,5 @@ components used
     jasmine
     express
     bable
-    redux
+    rug
+    axios

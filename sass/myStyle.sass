@@ -7,10 +7,14 @@
 $navBackgroundColor: #CC5656
 $myGreen: #D1F8A1
 $bgColor: #1bb
+$configBorder: 1px solid red
 
 =nav-p-tags()
   color: $myGreen
   cursor: pointer
+
+*
+  outline: 0
 
 html, body
   max-width: 100%
@@ -28,57 +32,70 @@ p
 body
   background-color: $bgColor
 
-.mdl-layout__header
-  background-color: $navBackgroundColor
-  position: fixed
+.mdl-layout
+  outline-width: 0 !important
 
-  .mdl-layout__header-row
+  .mdl-layout__header
     background-color: $navBackgroundColor
+    transform: translateY(-0.5em)
+    position: fixed
+
+    .mdl-layout__header-row
+      background-color: $navBackgroundColor
+
+      p
+        +nav-p-tags()
+        transform: translateY(0.4em)
+        font-size: 1.45em
+
+      img
+        width: 4.5em
+        height: 4.5em
+        transform: translateX(-1em)
+
+  .mdl-layout__obfuscator.is-visible
+    position: fixed
+
+  .mdl-layout__drawer.is-visible
+    background-color: $navBackgroundColor
+    position: fixed
+
+    .mdl-layout-title
+      margin-top: 0.25em
+      transform: translateX(1.5em)
 
     p
       +nav-p-tags()
-      transform: translateY(0.4em)
-      font-size: 1.2em
+      padding: 0.25em
 
-    img
-      width: 4.5em
-      height: 4.5em
-      transform: translateX(-1em)
+  .mdl-layout-title
+    color: $myGreen
+    margin-bottom: -0.8em
+    transform: translateY(-0.4em)
+    font-size: 1.75em !important
 
-.mdl-layout__obfuscator.is-visible
-  position: fixed
+  .material-icons
+    color: $myGreen
+    position: fixed
+    font-size: 1.1em !important
 
-.mdl-layout__drawer.is-visible
-  background-color: $navBackgroundColor
-  position: fixed
+  .mdl-layout__drawer .mdl-layout-title
+    font: 2.5em 'PT Serif', serif
 
-  p
-    +nav-p-tags()
-    padding: 0.5em
+  nav p:hover
+    background-color: rgba(248,236,105,0.5)
 
-.mdl-layout-title
-  color: $myGreen
-  margin-bottom: -0.8em
-  transform: translateY(-0.3em)
-  font-size: 2.7em
-
-.material-icons
-  color: $myGreen
-  position: fixed
-  transform: translateY(0.5em)
-
-.mdl-layout__drawer .mdl-layout-title
-  font: 2.5em 'PT Serif', serif
-
-nav p:hover
-  background-color: rgba(248,236,105,0.5)
+  .navP a
+    color: $myGreen !important
 
 .pageContent
   //https://pixabay.com/static/uploads/photo/2015/08/18/16/53/stripes-894504_960_720.jpg
   background: url(../../images/bgContent.png)
+  display: none
   background-size: cover
   text-align: center
-  transform: translateY(5em)
+  transform: translateY(3.5em) !important
+  margin-bottom: 5em
   border-radius: 3em
   box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.1), 1px -5px 1px rgba(0, 0, 0, 0.1)
   @if height == 0
@@ -86,6 +103,9 @@ nav p:hover
 
   h1,h2,h3,p
     color: $myGreen
+
+.myButton
+  background-color: $navBackgroundColor !important
 
 #home
   position: fixed
@@ -95,11 +115,11 @@ nav p:hover
   right: 2em
   background-color: $navBackgroundColor
 
+  .material-icons
+    color: $myGreen
+
 .mdl-layout
   margin-top: -2em
-
-#pageHome
-  transform: translateY(4em)
 
 video
   height: 50em
@@ -112,7 +132,8 @@ video
 #reactHome
   color: $navBackgroundColor
   position: relative
-  z-index: 100
+  margin-bottom: -2em
+  display: block
 
   #homePic
     height: 23em
@@ -142,7 +163,6 @@ video
     transform: translateY(-13em)
 
 #reactAbout
-  margin-bottom: -4em
 
   img
     height: 30em
@@ -159,7 +179,10 @@ video
     padding-bottom: 0.5em
     transform: translateY(1em)
 
-  p
+  p:nth-child(2)
+    font-size: 1.5em
+
+  p:last-child
     color: $navBackgroundColor
     font-size: 2em
     background-color: $bgColor
@@ -171,19 +194,20 @@ video
     line-height: 1.5em
     box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.1)
 
-#pageThnak
+#reactThnak
   position: relative
   margin-top: -2em
 
-#pageTools
-  margin-bottom: 2em
+#reactTools
+  margin-top: -4.6em
 
   h2
     margin: 2em 0 -0.25em 0
     padding-top: 0.5em
+    transform: translateX(0.5em)
 
   .mdl-list__item-avatar
-    transform: translate(-1.25em,-0.15em)
+    transform: translate(10em,-0.15em)
     color: $myGreen
 
   .ToolsName
@@ -197,5 +221,188 @@ video
     padding: 1em
     font: 1em "dyslexie"
 
-#pageProgramming
-  margin-bottom: 5em
+#reactProgramming
+  position: relative
+  margin: -1.1em 0 -50em 0
+
+  h2
+    margin: 1em 0 1.25em 0
+    padding-top: 0.5em
+
+  .programmingNode
+    height: 15em
+    width: 15em
+    border: 0.25em solid $myGreen
+    border-radius: 20em
+    background-color: $navBackgroundColor
+    position: relative
+    margin-bottom: -3em
+    box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.1)
+
+    h2
+      background-color: $bgColor
+      font-size: 2em
+      transform: rotate(45deg) translate(1em,1em)
+      border-radius: 5em
+      position: relative
+      z-index: 999
+      box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.1)
+
+    h3
+      background-color: $bgColor
+      font-size: 2em
+      border-radius: 5em
+      position: relative
+      z-index: 999
+      transform: translate(8em,-3em)
+
+      &:nth-child(2)
+        transform: translate(8em,-4.4em) rotate(350deg)
+
+      &:nth-child(3)
+        transform: translate(8em,-3.75em) rotate(-3deg)
+
+      &:nth-child(4)
+        transform: translate(8em,-2.85em) rotate(9deg)
+
+    &:nth-child(2)
+      transform: translate(5em,3em)
+
+    &:nth-child(3)
+      transform: translate(70em,-9.5em)
+
+    &:nth-child(4)
+      transform: translate(37.5em,1.5em)
+
+    &:nth-child(5)
+      transform: translate(70em,9em)
+
+    &:nth-child(6)
+      transform: translate(5em,-3em)
+
+    .left
+      height: 300px
+      width: 500px
+      transform: translateY(-21em)
+
+      &:last-child
+        margin-bottom: -5em !important
+
+      line
+        stroke: $navBackgroundColor
+        stroke-width: 10
+        box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.1)
+
+        &:first-child
+          transform: translate(10em,-3em) rotate(10deg)
+
+        &:nth-child(2)
+          transform: translate(7em,-6em) rotate(-3deg)
+
+        &:last-child
+          transform: translate(5em,-10em) rotate(-9deg)
+
+    .right
+      height: 300px
+      width: 500px
+      transform: translate(-23em,-30em)
+
+      &:last-child
+        margin-bottom: -5em !important
+
+      line
+        stroke: $navBackgroundColor
+        stroke-width: 10
+        box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.1)
+
+        &:first-child
+          transform: translate(3em,6em) rotate(350deg)
+
+        &:nth-child(2)
+          transform: translate(5em,-3em) rotate(3deg)
+
+        &:nth-child(3)
+          transform: translate(10em,-14.4em) rotate(14deg)
+
+        &:last-child
+          transform: translate(7em,-9em) rotate(9deg)
+
+    .fourP
+      transform: translate(-8em,-5em) !important
+
+      &:nth-child(2)
+        transform: translate(-8em,-6.7em) rotate(14deg) !important
+
+      &:nth-child(3)
+        transform: translate(-8em,-6.4em) rotate(10deg) !important
+
+      &:nth-child(4)
+        transform: translate(-8em,-6.1em) rotate(3deg) !important
+
+      &:nth-child(5)
+        transform: translate(-8em,-5.1em) rotate(-10deg) !important
+
+#reactReverse
+  margin-bottom: 7em
+
+  .mdl-menu
+    background-color: $bgColor
+
+    li
+      color: $myGreen
+
+      &[disabled]
+        color: #bdbdbd !important
+
+      &[disabled]:hover
+        background-color: $bgColor
+
+      &:hover
+        background-color: darken($bgColor, 10)
+
+  #wrapper
+    background-color: darken($navBackgroundColor,10)
+    box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.1)
+
+    button
+      height: 3em
+      width: 3em
+      transform: translateX(24em)
+      position: relative
+      z-index: 999
+
+      .material-icons
+        font-size: 2em
+        text-align: right !important
+        color: $myGreen
+
+  textarea
+    background-color: $navBackgroundColor
+    border-radius: 1em 2.5em 0 0
+    color: $myGreen
+    font-size: 1.5em
+    outline: 0
+
+  p
+    margin-bottom: -1em
+    transform: translateY(-2.5em)
+    font-size: 1.5em
+
+.mdl-snackbar__text
+  color: $myGreen !important
+  font-size: 1.5em
+
+#reactForm
+
+.mdl-dialog
+  background-color: $bgColor
+
+  h4
+    color: $myGreen !important
+
+  p
+    transform: translateY(0.25em) !important
+
+  button
+    color: $myGreen !important
+    background-color: $navBackgroundColor
