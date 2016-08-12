@@ -1,4 +1,5 @@
 import React from 'react';
+import {Button} from 'react-bootstrap';
 
 export default class Nav extends React.Component {
 	// Router version links <Link to="/">
@@ -7,7 +8,6 @@ export default class Nav extends React.Component {
 		this._clicker = this._clicker.bind(this);
 		this._clickerHome = this._clicker.bind(this, 'Home');
 		this._clickerAbout = this._clicker.bind(this, 'About');
-		this._clickerTools = this._clicker.bind(this, 'Tools');
 		this._clickerProgramming = this._clicker.bind(this, 'Programming');
 		this._clickerReverse = this._clicker.bind(this, 'Reverse');
 		this._clickerGame = this._clicker.bind(this, 'Game');
@@ -35,16 +35,16 @@ export default class Nav extends React.Component {
 							<div class="mdl-layout-spacer"></div>
 							<nav class="mdl-navigation">
 								<img src="images/shape.png" alt="Shape"/>
-								<p class="navP" onClick={this._clickerHome}>Home &nbsp;</p>
-								<p class="navP" onClick={this._clickerAbout}>About &nbsp;</p>
-								<p class="navP" onClick={this._clickerTools}>Tools &nbsp;</p>
-								<p class="navP" onClick={this._clickerForm}>Form &nbsp;</p>
 							</nav>
 						</div>
 					</header>
 					<div class="mdl-layout__drawer">
-						<span class="mdl-layout-title">Tools</span>
+						<span class="mdl-layout-title">Pages</span>
 						<nav class="mdl-navigation">
+							<p class="navP" onClick={this._clickerHome}>Home &nbsp;</p>
+							<p class="navP" onClick={this._clickerAbout}>About &nbsp;</p>
+							<p class="navP" onClick={this._clickerForm}>Form &nbsp;</p>
+							<hr/>
 							<p class="navP" onClick={this._clickerProgramming}>Programming Map</p>
 							<p class="navP" onClick={this._clickerReverse}>Reverse</p>
 							<p class="navP" onClick={this._clickerGame}>Game</p>
@@ -52,9 +52,9 @@ export default class Nav extends React.Component {
 					</div>
 				</div>
 
-				<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" id="home">
+				<Button bsClass="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" id="home">
 					<i class="material-icons" onClick={this._clickerHome}>home</i>
-				</button>
+				</Button>
 			</article>
 		);
 	}

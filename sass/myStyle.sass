@@ -51,7 +51,7 @@ body
       img
         width: 4.5em
         height: 4.5em
-        transform: translateX(-1em)
+        transform: translateX(1em)
 
   .mdl-layout__obfuscator.is-visible
     position: fixed
@@ -67,6 +67,9 @@ body
     p
       +nav-p-tags()
       padding: 0.25em
+
+    hr
+      margin-top: 0.25em
 
   .mdl-layout-title
     color: $myGreen
@@ -141,10 +144,10 @@ video
     margin-bottom: 2.5em
 
   h1
-    background: linear-gradient(rgba(0, 0, 0, 0) 95%, $bgColor 5%)
+    background: linear-gradient(rgba(0, 0, 0, 0) 90%, $bgColor 5%)
     border-radius: 5em
-    width: 17em
-    transform: translateX(3.5em)
+    width: 25em
+    transform: translateX(6em)
 
   p
     font-size: 2em
@@ -152,7 +155,7 @@ video
 
   img
     position: relative
-    transform: translate(37.5em,-7.3em)
+    transform: translate(37.5em,-4em)
 
   canvas
     position: relative
@@ -160,7 +163,7 @@ video
     z-index: 999
     height: 30em
     border-radius: 5em
-    transform: translateY(-13em)
+    transform: translateY(-12.5em)
 
 #reactAbout
 
@@ -171,10 +174,12 @@ video
 
   h2
     padding-top: 0.5em
+    font-size: 3em
 
   h3
     background-color: $bgColor
     border-radius: 5em 5em 0 0
+    font-size: 2.5em
     color: $navBackgroundColor
     padding-bottom: 0.5em
     transform: translateY(1em)
@@ -254,16 +259,16 @@ video
       border-radius: 5em
       position: relative
       z-index: 999
-      transform: translate(8em,-3em)
+      transform: translate(8em,-2em)
 
       &:nth-child(2)
-        transform: translate(8em,-4.4em) rotate(350deg)
+        transform: translate(8em,-4.4em) rotate(351deg)
 
       &:nth-child(3)
-        transform: translate(8em,-3.75em) rotate(-3deg)
+        transform: translate(8em,-3.25em) rotate(-3deg)
 
       &:nth-child(4)
-        transform: translate(8em,-2.85em) rotate(9deg)
+        transform: translate(8em,-1.9em) rotate(10deg)
 
     &:nth-child(2)
       transform: translate(5em,3em)
@@ -283,7 +288,7 @@ video
     .left
       height: 300px
       width: 500px
-      transform: translateY(-21em)
+      transform: translateY(-18em)
 
       &:last-child
         margin-bottom: -5em !important
@@ -305,7 +310,7 @@ video
     .right
       height: 300px
       width: 500px
-      transform: translate(-23em,-30em)
+      transform: translate(-23em,-25em)
 
       &:last-child
         margin-bottom: -5em !important
@@ -322,25 +327,25 @@ video
           transform: translate(5em,-3em) rotate(3deg)
 
         &:nth-child(3)
-          transform: translate(10em,-14.4em) rotate(14deg)
+          transform: translate(10em,-13em) rotate(14deg)
 
         &:last-child
           transform: translate(7em,-9em) rotate(9deg)
 
     .fourP
-      transform: translate(-8em,-5em) !important
+      transform: translate(-8em,-4em) !important
 
       &:nth-child(2)
-        transform: translate(-8em,-6.7em) rotate(14deg) !important
+        transform: translate(-8em,-5.6em) rotate(14deg) !important
 
       &:nth-child(3)
-        transform: translate(-8em,-6.4em) rotate(10deg) !important
+        transform: translate(-8em,-5.4em) rotate(9deg) !important
 
       &:nth-child(4)
-        transform: translate(-8em,-6.1em) rotate(3deg) !important
+        transform: translate(-8em,-4.6em) rotate(3deg) !important
 
       &:nth-child(5)
-        transform: translate(-8em,-5.1em) rotate(-10deg) !important
+        transform: translate(-8em,-3.1em) rotate(-10deg) !important
 
 #reactReverse
   margin-bottom: 7em

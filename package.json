@@ -18,7 +18,6 @@
   },
   "babel": {
     "presets": [
-      "react",
       "es2015",
       "es2016"
     ]
@@ -33,7 +32,8 @@
       "XMLHttpRequest"
     ],
     "ignores": [
-      "public/**"
+      "public/**",
+      "php/**"
     ],
     "extends": "xo-react",
     "overrides": [
@@ -63,6 +63,7 @@
     "pug": "^2.0.0-beta3",
     "pump": "^1.0.1",
     "react": "^15.2.1",
+    "react-bootstrap": "^0.30.0-rc.2",
     "react-dom": "^15.2.1",
     "serve-favicon": "^2.3.0",
     "three": "^0.78.0"
@@ -100,6 +101,10 @@
     "myBower": "./node_modules/.bin/bower",
     "dev": "./node_modules/.bin/gulp & node index.js",
     "devMom": "./node_modules/.bin/gulp & ./node_modules/.bin/nodemon index.js",
-    "stop": "./node_modules/.bin/gulp stop & kill $(lsof -t -i:35729)"
+    "stop": "./node_modules/.bin/gulp stop & kill $(lsof -t -i:35729)",
+    "show": "./node_modules/.bin/gulp mamp & node index.js",
+    "mamp": "./node_modules/.bin/gulp mamp",
+    "superDev": "npm run dev & npm run mamp",
+    "superDevMom": "npm run devMom & npm run mamp"
   }
 }

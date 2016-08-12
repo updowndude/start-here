@@ -40,6 +40,7 @@ app.post('/', (request, response) => {
 				throw err;
 			}
 			response.send('Done');
+			connection.release();
 		});
 	});
 });

@@ -87,7 +87,7 @@ body {
       .mdl-layout .mdl-layout__header .mdl-layout__header-row img {
         width: 4.5em;
         height: 4.5em;
-        transform: translateX(-1em); }
+        transform: translateX(1em); }
   .mdl-layout .mdl-layout__obfuscator.is-visible {
     position: fixed; }
   .mdl-layout .mdl-layout__drawer.is-visible {
@@ -100,6 +100,8 @@ body {
       color: #D1F8A1;
       cursor: pointer;
       padding: 0.25em; }
+    .mdl-layout .mdl-layout__drawer.is-visible hr {
+      margin-top: 0.25em; }
   .mdl-layout .mdl-layout-title {
     color: #D1F8A1;
     margin-bottom: -0.8em;
@@ -162,33 +164,35 @@ video {
     width: 23em;
     margin-bottom: 2.5em; }
   #reactHome h1 {
-    background: linear-gradient(transparent 95%, #1bb 5%);
+    background: linear-gradient(transparent 90%, #1bb 5%);
     border-radius: 5em;
-    width: 17em;
-    transform: translateX(3.5em); }
+    width: 25em;
+    transform: translateX(6em); }
   #reactHome p {
     font-size: 2em;
     margin-top: -0.5em; }
   #reactHome img {
     position: relative;
-    transform: translate(37.5em, -7.3em); }
+    transform: translate(37.5em, -4em); }
   #reactHome canvas {
     position: relative;
     margin: -15em 0 -15em 0;
     z-index: 999;
     height: 30em;
     border-radius: 5em;
-    transform: translateY(-13em); }
+    transform: translateY(-12.5em); }
 
 #reactAbout img {
   height: 30em;
   width: 30em;
   border: 10px inset #CC5656; }
 #reactAbout h2 {
-  padding-top: 0.5em; }
+  padding-top: 0.5em;
+  font-size: 3em; }
 #reactAbout h3 {
   background-color: #1bb;
   border-radius: 5em 5em 0 0;
+  font-size: 2.5em;
   color: #CC5656;
   padding-bottom: 0.5em;
   transform: translateY(1em); }
@@ -258,13 +262,13 @@ video {
       border-radius: 5em;
       position: relative;
       z-index: 999;
-      transform: translate(8em, -3em); }
+      transform: translate(8em, -2em); }
       #reactProgramming .programmingNode h3:nth-child(2) {
-        transform: translate(8em, -4.4em) rotate(350deg); }
+        transform: translate(8em, -4.4em) rotate(351deg); }
       #reactProgramming .programmingNode h3:nth-child(3) {
-        transform: translate(8em, -3.75em) rotate(-3deg); }
+        transform: translate(8em, -3.25em) rotate(-3deg); }
       #reactProgramming .programmingNode h3:nth-child(4) {
-        transform: translate(8em, -2.85em) rotate(9deg); }
+        transform: translate(8em, -1.9em) rotate(10deg); }
     #reactProgramming .programmingNode:nth-child(2) {
       transform: translate(5em, 3em); }
     #reactProgramming .programmingNode:nth-child(3) {
@@ -278,7 +282,7 @@ video {
     #reactProgramming .programmingNode .left {
       height: 300px;
       width: 500px;
-      transform: translateY(-21em); }
+      transform: translateY(-18em); }
       #reactProgramming .programmingNode .left:last-child {
         margin-bottom: -5em !important; }
       #reactProgramming .programmingNode .left line {
@@ -294,7 +298,7 @@ video {
     #reactProgramming .programmingNode .right {
       height: 300px;
       width: 500px;
-      transform: translate(-23em, -30em); }
+      transform: translate(-23em, -25em); }
       #reactProgramming .programmingNode .right:last-child {
         margin-bottom: -5em !important; }
       #reactProgramming .programmingNode .right line {
@@ -306,19 +310,19 @@ video {
         #reactProgramming .programmingNode .right line:nth-child(2) {
           transform: translate(5em, -3em) rotate(3deg); }
         #reactProgramming .programmingNode .right line:nth-child(3) {
-          transform: translate(10em, -14.4em) rotate(14deg); }
+          transform: translate(10em, -13em) rotate(14deg); }
         #reactProgramming .programmingNode .right line:last-child {
           transform: translate(7em, -9em) rotate(9deg); }
     #reactProgramming .programmingNode .fourP {
-      transform: translate(-8em, -5em) !important; }
+      transform: translate(-8em, -4em) !important; }
       #reactProgramming .programmingNode .fourP:nth-child(2) {
-        transform: translate(-8em, -6.7em) rotate(14deg) !important; }
+        transform: translate(-8em, -5.6em) rotate(14deg) !important; }
       #reactProgramming .programmingNode .fourP:nth-child(3) {
-        transform: translate(-8em, -6.4em) rotate(10deg) !important; }
+        transform: translate(-8em, -5.4em) rotate(9deg) !important; }
       #reactProgramming .programmingNode .fourP:nth-child(4) {
-        transform: translate(-8em, -6.1em) rotate(3deg) !important; }
+        transform: translate(-8em, -4.6em) rotate(3deg) !important; }
       #reactProgramming .programmingNode .fourP:nth-child(5) {
-        transform: translate(-8em, -5.1em) rotate(-10deg) !important; }
+        transform: translate(-8em, -3.1em) rotate(-10deg) !important; }
 
 #reactReverse {
   margin-bottom: 7em; }

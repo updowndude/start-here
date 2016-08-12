@@ -7,9 +7,9 @@ const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const pump = require('pump');
-const babel = require('gulp-babel');
 const pug = require('gulp-pug');
 const webpack = require('gulp-webpack');
+const babel = require('gulp-babel');
 const mamp = require('gulp-mamp');
 
 const options = {};
@@ -18,8 +18,9 @@ options.port = 3306;
 options.site_path = '/Applications/MAMP/htdocs/start-here';
 
 gulp.task('myTask', ['sass'], () => {
-	return gulp.src(['public/dist/myStyle.css',
-  'bower_components/material-design-lite/material.css'])
+	return gulp.src(['bower_components/material-design-lite/material.css',
+		'bower_components/bootstrap/dist/css/bootstrap.css',
+		'public/dist/myStyle.css'])
     .pipe(concatCss('final.css'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('public/dist/done'))
@@ -51,8 +52,8 @@ gulp.task('stop', cb => {
 
 gulp.task('jsMin', ['js'], cb => {
 	pump([
-		gulp.src('public/dist/my-stuff.js')
-		.pipe(babel()),
+		gulp.src('public/dist/my-stuff.js'),
+		babel(),
 		uglify(),
 		gulp.dest('public/dist/done')
 	],
@@ -74,7 +75,7 @@ gulp.task('pug', () => {
 	.pipe(livereload());
 });
 
-gulp.task('default', ['mamp'], () => {
+gulp.task('default', () => {
 	livereload({start: true});
 	gulp.watch('js/*.js', ['js']);
 	gulp.watch('sass/*.sass', ['myTask']);
@@ -107,7 +108,8 @@ gulp.task('jsx', () => {
 });
 
 gulp.task('lib', () => {
-	return gulp.src(['bower_components/material-design-lite/material.min.js'])
+	return gulp.src(['bower_components/material-design-lite/material.min.js',
+		'bower_components/bootstrap-without-jquery/bootstrap3/bootstrap-without-jquery.js'])
     .pipe(concat('rLib.js'))
     .pipe(gulp.dest('public/dist/done'));
 });

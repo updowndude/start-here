@@ -5,7 +5,6 @@ import Game from './game.jsx';
 import Home from './home.jsx';
 import Programming from './programming.jsx';
 import Reverse from './reverse.jsx';
-import Tools from './tools.jsx';
 import Nav from './nav.jsx';
 
 export default class Layout extends React.Component {
@@ -17,7 +16,6 @@ export default class Layout extends React.Component {
 				<Nav/>
 				<Home img="images/fm.png" location="https://github.com/updowndude/start-here"/>
 				<About img="images/me.jpg"/>
-				<Tools/>
 				<Programming/>
 				<Reverse/>
 				<Game/>

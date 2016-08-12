@@ -1,12 +1,12 @@
 function findMyCookie(name) {
 	const cookiesArray = document.cookie.split(';');
-	let nameCookie = '';
+	let myCookie = '';
 
 	for (let i = 0; i < cookiesArray.length; i++) {
-		nameCookie = cookiesArray[i].trim();
+		myCookie = cookiesArray[i].trim();
 
-		if (nameCookie.indexOf(name) > -1) {
-			return nameCookie;
+		if (myCookie.indexOf(name) > -1) {
+			return myCookie;
 		}
 	}
 
